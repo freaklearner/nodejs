@@ -1,0 +1,7 @@
+Hello ShubhamHello Shubham
+Hello +${user.username}!
+Hello ${user.username}!
+HelloShubham!
+Hello Shubham!
+Hello Shubham!
+Hello Shubham! Yor are 25.
