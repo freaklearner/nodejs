@@ -1,12 +1,27 @@
 console.log("Starting app.js");
 
 const fs = require('fs');
-const os = require('os');
 const _ = require('lodash');
+//const os = require('os');
+
 const notes = require('./notes.js');
 
-var filter = _.uniq(['Shub','shub','Shub',1,2,3,1,'shub']);
-console.log(filter);
+var command = process.argv[2];
+if(command === 'add'){
+  console.log('Adding node');
+}else if(command === 'list'){
+  console.log('listing nodes');
+}else{
+  console.log('command not recognized');
+}
+//console.log(process.argv);
+
+
+
+
+
+//var filter = _.uniq(['Shub','Abhi']);
+//console.log(filter);
 
 
 
