@@ -2,15 +2,22 @@ console.log("Starting app.js");
 
 const fs = require('fs');
 const _ = require('lodash');
+const yargs = require('yargs');
 //const os = require('os');
-
 const notes = require('./notes.js');
+
+
+var command = process.argv[2];
+
+console.log('Yargs',yargs.argv);
+
+console.log('command',command);
 
 var command = process.argv[2];
 if(command === 'add'){
-  console.log('Adding node');
+  notes.addNotes(yargs.argv.title,yargs.argv.body);
 }else if(command === 'list'){
-  console.log('listing nodes');
+  notes.getAll();
 }else{
   console.log('command not recognized');
 }
