@@ -1,6 +1,18 @@
 
+const fs = require('fs');
 
+var obj = {
+  title : 'naruto',
+  body : 'some body'
+}
 
+var str = JSON.stringify(obj);
+//fs.writeFileSync('notes.json',str);
+//console.log('file written');
+
+str = fs.readFileSync('notes.json');
+obj = JSON.parse(str);
+console.log(obj.title);
 
 
 /*var obj = {
