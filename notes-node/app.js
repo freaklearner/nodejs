@@ -13,7 +13,6 @@ console.log('Yargs',yargs.argv);
 
 console.log('command',command);
 
-var command = process.argv[2];
 if(command === 'add'){
   notes.addNotes(yargs.argv.title,yargs.argv.body);
 }else if(command === 'list'){
