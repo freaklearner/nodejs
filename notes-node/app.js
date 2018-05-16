@@ -14,9 +14,21 @@ console.log('Yargs',yargs.argv);
 console.log('command',command);
 
 if(command === 'add'){
-  notes.addNotes(yargs.argv.title,yargs.argv.body);
+  note = notes.addNotes(yargs.argv.title,yargs.argv.body);
+  if(note){
+    console.log()
+    console.log('--');
+    console.log('title: ',note.title);
+    console.log('body: ',note.body);
+  }
+  else{
+    console.log('Duplicate node already exist');
+  }
 }else if(command === 'list'){
   notes.getAll();
+}else if(command === 'remove'){
+   var res = notes.removeNote(yargs.argv.title);
+   console.log(res);
 }else{
   console.log('command not recognized');
 }
